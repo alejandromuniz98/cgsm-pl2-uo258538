@@ -16,11 +16,27 @@ const textureLoader = new THREE.TextureLoader( );  // The object used to load te
 const map = textureLoader.load( mapUrl,( loaded ) => { renderer.render( scene, camera ); } );
 const material = new THREE.MeshPhongMaterial( { map: map } );
 
+const mapUrl2 = "../textures/nubes.png";   // The file used as texture
+const textureLoader2 = new THREE.TextureLoader( );  // The object used to load textures
+const map2 = textureLoader2.load( mapUrl2,( loaded ) => { renderer.render( scene, camera ); } );
+var nubes = new THREE.MeshLambertMaterial( { color: 0xFFFFFF, map: map2, transparent: true } );
+
 
 const geometry = new THREE.SphereGeometry( 5, 32, 32 );
 const sphere = new THREE.Mesh( geometry, material );
 
-scene.add( sphere );
+const geometry2 = new THREE.SphereGeometry( 5.2, 32, 32 );
+const atmosfera = new THREE.Mesh( geometry2, nubes );
+
+
+var tierYatmo = new THREE.Object3D();
+tierYatmo.add( sphere );
+tierYatmo.add( atmosfera );
+
+tierYatmo.rotation.set( 0, 0, 0.36 );
+
+scene.add( tierYatmo );
+
 
 const light = new THREE.PointLight();
 light.position.set( 30, 0, 30 );
