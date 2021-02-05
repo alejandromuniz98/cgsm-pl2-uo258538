@@ -9,7 +9,7 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
 const camera = new THREE.PerspectiveCamera ( 45, window.innerWidth / window.innerHeight, 1, 4000 );
-camera.position.set( 0, 0, 75 );
+camera.position.set( 0, 0, 35 );
 
 const mapUrl = "../textures/tex2-2.gif";   // The file used as texture
 const textureLoader = new THREE.TextureLoader( );  // The object used to load textures

@@ -11,8 +11,12 @@ document.body.appendChild( renderer.domElement );
 const camera = new THREE.PerspectiveCamera ( 45, window.innerWidth / window.innerHeight, 1, 4000 );
 camera.position.set( 0, 0, 3 );
 
+const mapUrl = "../textures/tex2-1.gif";   // The file used as texture
+const textureLoader = new THREE.TextureLoader( );  // The object used to load textures
+const map = textureLoader.load( mapUrl,( loaded ) => { renderer.render( scene, camera ); } );
+const material = new THREE.MeshBasicMaterial( { map: map } );
+
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const material = new THREE.MeshBasicMaterial( );
 const box = new THREE.Mesh( geometry, material );
 
 box.rotation.set( Math.PI / 5, Math.PI / 5, 0 );
