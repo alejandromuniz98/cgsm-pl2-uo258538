@@ -45,7 +45,7 @@ function animate( ) {
         if ( texture ) texture.needsUpdate = true;
     }
     const delta = clock.getDelta( );
-    const rotation = ( delta * Math.PI * 2 ) / 10;
+    const rotation = ( delta * Math.PI * 2 ) / 5;
     wall.rotation.y += rotation;
     // Render the scene
     renderer.render( scene, camera );
