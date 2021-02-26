@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Informe de prácticas de CGSM (2021)</title>
+        <link rel="stylesheet" type="text/css" href="report.css">
+        <script src="dash.all.min.js"></script>
+    </head>
+    <body>
+        <!-- Información general -->
+        <div id="head">
+            <table id="general">
+                <tr>
+                    <th class="header">Nombre:</th>
+                    <td>Alejandro Muñiz Berdasco</td>                     
+                </tr>
+                <tr>
+                    <th>Práctica:</th>
+                    <td>5</td> 
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <h1>Memoria</h1>
+            <h2>Descripción de la práctica</h2>
+            <p>En esta practica se utilizará MPEG-DASH para la difusión de servicios de streaming de video. Para ello se utilizará un servidor web en una máquina virtual para ofrecer este servicio y para consumirlo se creará una página web que mediante la biblioteca Dash.js nos permitirá incrustar el video en streaming en la página.</p>
+            <h2>Preguntas-Manifiesto1</h2>
+            <b>¿Cuántas codificaciones de audio distintas puede utilizar el cliente para adaptarse a condiciones cambiantes de la red?</b>
+            <p>1</p>
+            <b>¿Y de vídeo?</b>
+            <p>4</p>
+            <b>¿Cuántas resoluciones de vídeo distintas puede usar el cliente? Indica cuáles.</b>
+            <p>Solo en 480</p>
+            <h2>Preguntas-Manifiesto2</h2>
+            <b>¿Cuántas codificaciones de audio distintas puede utilizar el cliente para adaptarse a condiciones cambiantes de la red?</b>
+            <p>1</p>
+            <b>¿Y de vídeo?</b>
+            <p>3</p>
+            <b>¿Cuántas resoluciones de vídeo distintas puede usar el cliente? Indica cuáles.</b>
+            <p>Hay 3 resoluciones disponibles: 288, 432 y 720</p>
+            <h2>Vídeo bajo demanda con MPEG-DASH</h2>
+                <p>Sirviendo counter.mpd</p>
+                <image src="images/i1.png" width="700" height="400">
+                <p>Sirviendo trailer.mpd sin extraer el audio y el video</p>
+                <image src="images/i2.png" width="700" height="400">
+                <p>Sirviendo trailer.mpd extrayendo el audio y el video en 480</p>
+                <image src="images/i3.png" width="700" height="400">
+                <p>Sirviendo trailer.mpd extrayendo el audio y el video en 480, 720 y 1080</p>
+                <image src="images/i4.png" width="700" height="400">
+
+                <h2>Ejercicio 1</h2>
+                <iframe class="container" src="prac5-1.html">
+            </iframe>
+            <image src="images/i5.png" width="700" height="400">
+                <h2>Ejercicio 2</h2>
+                <iframe class="container" src="prac5-2.html">
+            </iframe>
+            <image src="images/i6.png" width="700" height="400">
+            <h2>Dificultades encontradas</h2>
+           <p>La mayor dificultad a la hora de realizar la práctica ha sido la de comprender la estrucutura de los manifiestos .mpd.</p>
+            </div>
+    </body>
+</html>
